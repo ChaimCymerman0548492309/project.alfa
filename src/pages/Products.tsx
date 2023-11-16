@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GlobalState, Product, setCompare, setProductId } from "../state";
+import { GlobalState, Product, setProductId } from "../state";
 import {
   Box,
   Container,
@@ -13,20 +13,14 @@ import {
   CardContent,
 } from "@mui/material";
 import { useGetProductsQuery } from "../state/api";
-import { useState } from "react";
 const Products = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const compare = useSelector(
-    (state: { global: GlobalState }) => state.global.compare
-  );
+
   const curCategory = useSelector(
     (state: { global: GlobalState }) => state.global.category
   );
-  const [filter, setFilter] = useState("");
-  // const tempData = useSelector(
-  //   (state: { global: GlobalState }) => state.global.products
-  // );
+ 
 
   let { data: products, error } = useGetProductsQuery({}); // products
 
@@ -37,7 +31,6 @@ const Products = () => {
   products = products? products.filter((p: any) => p.category == curCategory)
     : [];
 
-  //lodash  products =  _.sortBy(products, filter)
 
   return (
     <div style={{ backgroundColor: "#87CEEB", minHeight: "93vh" }}>

@@ -1,6 +1,5 @@
 
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { GlobalState, Product } from "../state";
 import {
   Box,
@@ -15,7 +14,6 @@ import {
 
 
 const Compare = () => {
-  const navigate = useNavigate();
   const {compare} = useSelector((state: {global: GlobalState}) => state.global)
   console.log(compare);
   

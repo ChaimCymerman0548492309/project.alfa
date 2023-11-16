@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -19,14 +19,12 @@ const SignUpModal = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const [open, setOpen] = useState(false);
-  const [formData, setFormData] = useState(null);
   const [messageAnchorEl, setMessageAnchorEl] = useState(null);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const onSubmit = async (data: any) => {
-    // console.log(data);
     const {
       user_id,
       username,
