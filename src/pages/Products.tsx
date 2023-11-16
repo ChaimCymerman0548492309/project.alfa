@@ -87,7 +87,7 @@ const Products = () => {
 
 
   return (
-    <div style={{ backgroundColor: "#87CEEB", minHeight: "93vh" }}>
+    <div style={{ backgroundColor: "#F0F0F0", minHeight: "93vh" }}>
       <div>
         <Box
           sx={{

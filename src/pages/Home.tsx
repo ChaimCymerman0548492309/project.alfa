@@ -35,7 +35,7 @@ const Home = () => {
   //filter
 
   return (
-    <div style={{ backgroundColor: "#87CEEB" }}>
+    <div style={{ backgroundColor: "#F0F0F0" }}>
       <Box
         sx={{
           pt: 8,
