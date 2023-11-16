@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { GlobalState, Product, setCart } from "../state";
 import {
   Box,
@@ -19,19 +18,19 @@ const Cart = () => {
   );
   console.log(cart );
 
-type dataToServerAddUser = {
-  user_id: any;
-  username: any;
-  password: any;
-  name: any;
-  email: any;
-  address: any;
-  cart: never[];
-}
+// type dataToServerAddUser = {
+//   user_id: any;
+//   username: any;
+//   password: any;
+//   name: any;
+//   email: any;
+//   address: any;
+//   cart: never[];
+// }
 
-const Cart = () => {
-  const navigate = useNavigate();
-  const localStorageData = localStorage.getItem('userData')
+// const Cart = () => {
+//   const navigate = useNavigate();
+//   const localStorageData = localStorage.getItem('userData')
   // const : {
   //   user_id,
   //   username,
@@ -41,10 +40,14 @@ const Cart = () => {
   //   address,
     
   // } = localStorageData;
-  const { cart } = useSelector(
-    (state: { global: GlobalState }) => state.global
-  );
-  console.log(cart +' line 21');
+  // const { cart : any } = useSelector(
+  //   (state: { global: GlobalState }) => state.global
+  // );
+  // console.log(cart );
+
+
+
+  
   const dispatch = useDispatch()
 
   return (
@@ -125,6 +128,7 @@ const Cart = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Cart;
+
+export default Cart
