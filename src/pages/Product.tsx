@@ -28,6 +28,8 @@ export default function Product() {
   //   const localData = local ? JSON.parse(local) : [];
   //   return localData;
   // };
+  const categoryAtt: any = product?.categoryAttributes
+  console.log(categoryAtt);
 
   const addToCart = () => {
     let temp = [...cart, product];
@@ -42,7 +44,7 @@ export default function Product() {
     dispatch(setCompare(temp));
     if (compare.length > 0) {
       navigate("/compare");
-    }else {
+    } else {
       navigate(-1)
     }
   };
@@ -77,17 +79,24 @@ export default function Product() {
             <Typography variant="body2" color="text.secondary">
               {product.commonAttributes.description}
             </Typography>
+            <br/>
+            {categoryAtt && Object.entries(categoryAtt).map(([key, value]) => (
+              <Typography variant="body2" color="text.secondary" key={key}>
+                <strong>{`${key}`}</strong>: {`${value}`}
+              </Typography>
+            ))}
           </CardContent>
+
           <CardActions>
             <Button onClick={() => addToCart()} size="small">
               Add to cart
-              </Button>
+            </Button>
 
             <Button size="small" onClick={addToCompare}>
               Compare
             </Button>
-            <Button size="small" onClick={()=>{navigate("/Map")}}>
-            Available at these stores:
+            <Button size="small" onClick={() => { navigate("/Map") }}>
+              Available at these stores:
             </Button>
 
           </CardActions>

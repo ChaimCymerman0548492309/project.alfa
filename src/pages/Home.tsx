@@ -14,6 +14,7 @@ import CardCover2 from "@mui/joy/CardCover";
 import CardContent2 from "@mui/joy/CardContent";
 import Typography2 from "@mui/joy/Typography";
 import { useDispatch } from "react-redux";
+import './Home.css'
 
 const Home = () => {
   const navigate = useNavigate();

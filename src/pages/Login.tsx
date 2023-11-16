@@ -88,9 +88,26 @@ const Login = () => {
       )}
 
       <div>
-        <Button onClick={handleOpen} style={{ color: "white" }}>
-          Login
-        </Button>
+      <Button
+  color="inherit"
+  onClick={handleOpen}
+  style={{
+    marginLeft: "16px",
+    marginRight: "10px",
+
+    background: "linear-gradient(to bottom, #4CAF50, #45A049)",
+    color: "white",
+    borderRadius: "5px",
+    padding: "10px 20px",
+    border: "none",
+    cursor: "pointer",
+    transition: "background 0.3s ease",
+  }}
+>
+  Login
+</Button>
+
+      
         <Modal
           open={open}
           onClose={handleClose}

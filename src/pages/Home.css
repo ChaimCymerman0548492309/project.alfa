@@ -1,0 +1,48 @@
+/* עיצוב הרקע של הקומפוננט */
+.home-container {
+    background-color: #87CEEB;
+  }
+  
+  /* עיצוב הטייטל */
+  .home-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* עיצוב הקונטיינר של הקארדים */
+  .cards-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  /* עיצוב הקארדים */
+  .card {
+    min-height: 280px;
+    width: 320px;
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* עיצוב התמונה בקארד */
+  .card-media {
+    height: 140px;
+  }
+  
+  /* עיצוב התוכן של הקארד */
+  .card-content {
+    color: #666;
+  }
+  
+  /* עיצוב הטקסט בתוך הקארד */
+  .card-text {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  

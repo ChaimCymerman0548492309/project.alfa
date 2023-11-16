@@ -262,9 +262,18 @@ export default function Header() {
               <MoreIcon />
             </IconButton>
           </Box>
-          <Button color="inherit" onClick={handleLogout}>
-            <Logout/>
-          </Button>
+          <Button
+  color="inherit"
+  onClick={handleLogout}
+  style={{
+    marginLeft: "20px",
+    backgroundColor: "white", // צבע רקע
+    borderRadius: "5px", // רינועים מעטים
+    padding: "5px 10px", // מרווחים פנימה
+  }}
+>
+  Sign Out
+</Button>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

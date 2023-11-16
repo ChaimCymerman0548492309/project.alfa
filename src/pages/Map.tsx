@@ -88,7 +88,7 @@ const IsraelMap: React.FC = () => {
       });
     map.addOverlay(marker6);
     marker6.getElement()?.addEventListener('click', () => {
-      // הצג טקסט בדיאלוג כאשר לוחצים על הסמן
+      // הצג טקסט בדיאלוג כאשר לוחצים  הסמן
       setDialogText('Ashdod electrical store');
     });
     map.addOverlay(marker6);

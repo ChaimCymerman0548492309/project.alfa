@@ -25,8 +25,17 @@ export default function Footer() {
               About Us
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
+              We work in the Israel Defense Forces and this is our project, hope you enjoyed!
+              <br />
+              <br />
+              Chaim Cymerman
+              <br />
+              Yishay Ainouze
+              <br />
+              Ido Elishar
+              <br />
+              Jonathan wiezel
+
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -34,30 +43,30 @@ export default function Footer() {
               Contact Us
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              123 Main Street, Anytown, USA
+              Hatsira 13 Petah Tikva, Israel
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Email: info@example.com
+              Email: Kapatz@digital.idf.il
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 8901
+              Phone: 1111
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
               Follow Us
             </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
+            <Link href="https://www.facebook.com/idfonline/" color="inherit">
               <Facebook />
             </Link>
             <Link
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/idfonline/"
               color="inherit"
               sx={{ pl: 1, pr: 1 }}
             >
               <Instagram />
             </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
+            <Link href="https://twitter.com/idfonline" color="inherit">
               <Twitter />
             </Link>
           </Grid>

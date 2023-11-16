@@ -72,7 +72,23 @@ const SignUpModal = () => {
   const messageId = openMessagePopover ? 'simple-popover' : undefined;
   return (
     <div>
-      <Button onClick={handleOpen} style={{ color: "white" }}>Sign Up</Button>
+    <Button
+  color="inherit"
+  onClick={handleOpen}
+  style={{
+    background: "linear-gradient(to bottom, #3F51B5, #303F9F)", // צבע רקע שונה
+    borderRadius: "5px",
+    padding: "10px 20px",
+    color: "white",
+    marginRight: "16px",
+    border: "none",
+    cursor: "pointer",
+    transition: "background 0.3s ease",
+  }}
+>
+  Sign Up
+</Button>
+
       <Modal
         open={open}
         onClose={handleClose}
