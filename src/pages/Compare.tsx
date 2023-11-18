@@ -1,6 +1,5 @@
 
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { GlobalState, Product } from "../state";
 import {
   Box,
@@ -15,13 +14,12 @@ import {
 
 
 const Compare = () => {
-  const navigate = useNavigate();
   const {compare} = useSelector((state: {global: GlobalState}) => state.global)
   console.log(compare);
   
   return (
     <div>
-      <div style={{ backgroundColor: "#87CEEB", minHeight: "93vh" }}>
+      <div style={{ backgroundColor: "#F0F0F0", minHeight: "93vh" }}>
       <div>
         <Box
           sx={{

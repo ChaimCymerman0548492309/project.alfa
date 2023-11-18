@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GlobalState, Product, setCompare, setProductId } from "../state";
+import { GlobalState, Product, setProductId } from "../state";
 import {
   Box,
   Container,
@@ -13,6 +13,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { useGetProductsQuery } from "../state/api";
+
 import { useState } from "react";
 import sortBy from "lodash/sortBy";
 import { TextField } from "@mui/material";
@@ -20,12 +21,11 @@ import { TextField } from "@mui/material";
 const Products = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const compare = useSelector(
-    (state: { global: GlobalState }) => state.global.compare
-  );
+
   const curCategory = useSelector(
     (state: { global: GlobalState }) => state.global.category
   );
+
   const [filter, setFilter] = useState("");
 
   // const tempData = useSelector(
@@ -85,10 +85,9 @@ const Products = () => {
 
     : [];
 
-  //lodash  products =  _.sortBy(products, filter)
 
   return (
-    <div style={{ backgroundColor: "#87CEEB", minHeight: "93vh" }}>
+    <div style={{ backgroundColor: "#F0F0F0", minHeight: "93vh" }}>
       <div>
         <Box
           sx={{

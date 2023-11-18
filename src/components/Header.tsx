@@ -22,12 +22,11 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { GlobalState } from '../state';
 import { Button } from '@mui/base';
-import { Logout } from '@mui/icons-material';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.1),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
@@ -88,7 +87,7 @@ export default function Header() {
   if (storedUserData) {
     // Parse the stored JSON data
     const userData = JSON.parse(storedUserData);
-  const{name} = userData
+  // const{name} = userData
     // Now you can use the user data as needed
     console.log('User data from localStorage:', userData);
   } else {
@@ -267,7 +266,7 @@ export default function Header() {
   onClick={handleLogout}
   style={{
     marginLeft: "20px",
-    backgroundColor: "white", // צבע רקע
+    backgroundColor: "lightblue", // צבע רקע
     borderRadius: "5px", // רינועים מעטים
     padding: "5px 10px", // מרווחים פנימה
   }}

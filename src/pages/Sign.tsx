@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -18,15 +18,13 @@ import Popover from "@mui/material/Popover";
 const SignUpModal = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const [open, setOpen] = useState(false);
-  const [formData, setFormData] = useState(null);
-  const [messageAnchorEl, setMessageAnchorEl] = useState(null);
+  const [open, setOpen] = React.useState(false);
+  const [messageAnchorEl, setMessageAnchorEl] = React.useState(null);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const onSubmit = async (data: any) => {
-    // console.log(data);
     const {
       user_id,
       username,
@@ -36,7 +34,6 @@ const SignUpModal = () => {
       address,
     } = data;
 
-    setFormData(data);
     console.log(user_id, username, password, name, email, address);
 
     const dataToServerAddUser = {

@@ -56,7 +56,7 @@ export default function Product() {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "93vh",
-        background: "#87CEEB",
+        background: "#F0F0F0",
       }}
     >
       {product?.commonAttributes && (

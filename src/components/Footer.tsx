@@ -1,4 +1,4 @@
-import * as React from "react";
+// import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
@@ -13,7 +13,7 @@ export default function Footer() {
       sx={{
         backgroundColor: (theme) =>
           theme.palette.mode === "light"
-            ? theme.palette.grey[200]
+            ? theme.palette.grey[400]
             : theme.palette.grey[800],
         p: 6,
       }}

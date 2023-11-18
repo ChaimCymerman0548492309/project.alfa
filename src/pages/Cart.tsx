@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { GlobalState, Product, setCart } from "../state";
 import {
   Box,
@@ -13,19 +12,25 @@ import {
   CardContent,
 } from "@mui/material";
 
-type dataToServerAddUser = {
-  user_id: any;
-  username: any;
-  password: any;
-  name: any;
-  email: any;
-  address: any;
-  cart: never[];
-}
-
 const Cart = () => {
-  const navigate = useNavigate();
-  const localStorageData = localStorage.getItem('userData')
+  const { cart } = useSelector(
+    (state: { global: GlobalState }) => state.global
+  );
+  console.log(cart );
+
+// type dataToServerAddUser = {
+//   user_id: any;
+//   username: any;
+//   password: any;
+//   name: any;
+//   email: any;
+//   address: any;
+//   cart: never[];
+// }
+
+// const Cart = () => {
+//   const navigate = useNavigate();
+//   const localStorageData = localStorage.getItem('userData')
   // const : {
   //   user_id,
   //   username,
@@ -35,15 +40,19 @@ const Cart = () => {
   //   address,
     
   // } = localStorageData;
-  const { cart } = useSelector(
-    (state: { global: GlobalState }) => state.global
-  );
-  console.log(cart +' line 21');
+  // const { cart : any } = useSelector(
+  //   (state: { global: GlobalState }) => state.global
+  // );
+  // console.log(cart );
+
+
+
+  
   const dispatch = useDispatch()
 
   return (
     <div>
-      <div style={{ backgroundColor: "#87CEEB", minHeight: "93vh" }}>
+      <div style={{ backgroundColor: "#F0F0F0", minHeight: "93vh" }}>
         <div>
           <Box
             sx={{
@@ -119,6 +128,7 @@ const Cart = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Cart;
+
+export default Cart
